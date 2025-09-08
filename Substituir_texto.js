@@ -1,11 +1,12 @@
 import {View,Text,Button,StyleSheet} from 'react-native';
+import {useState} from 'react';
 
 export default function App(){
+  const [texto, setText] = useState('Me doa um estagio');
   return(
     <View style ={styles.Container}>
-      <Text style ={styles.texto}> Me doa um estagio por favor!</Text>
-      <Button title ="clique aq" onPress ={( )=> alert 
-      ("adhajhdjakdakl")} />  
+      <Text style ={styles.texto}>{texto}</Text>
+      <Button title ="Doação" onPress ={( )=> setText( "Ainda Estou desempregado")} />  
     </View>
   );
 }
